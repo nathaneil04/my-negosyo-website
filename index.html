@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="theme-color" content="#1769ff">
+  <meta name="description" content="MyNegosyo — a simple digital manager for sari-sari stores and small businesses. Inventory, sales, services, utang, GCash, e-load, bills and payroll.">
+  <title>MyNegosyo — Run your negosyo smarter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="announcement"><div class="container announcement-inner"><span><i class="fa-solid fa-sparkles"></i> MyNegosyo app is built for Filipino sari-sari stores & small businesses</span></div></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="MyNegosyo home">
+        <span class="brand-logo" aria-hidden="true"><span class="brand-m">M</span><span class="brand-n">N</span><span class="brand-arc"></span></span>
+        <span class="brand-copy"><strong><b>My</b><em>Negosyo</em></strong><small>Negosyo manager</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#features">Features</a><a href="#how">How It Works</a><a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-ghost" id="loginBtn">Log in</button>
+        <button class="btn btn-primary" id="installBtn"><i class="fa-solid fa-download"></i> Install App</button>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+  <a href="#features">Features</a>
+  <a href="#how">How It Works</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#faq">FAQ</a>
+
+  <button
+    class="btn btn-primary mobile-signup"
+    id="mobileInstall"
+    type="button"
+  >
+    <i class="fa-solid fa-download"></i> Install App
+  </button>
+</div>
+
+<script>
+  // Paste your direct app/APK link here
+  const MYNEGOSYO_APP_LINK = "https://my-negosyo-7rpohhmbd-nathz.vercel.app/";
+
+  document.getElementById("mobileInstall").addEventListener("click", function () {
+    if (
+      !MYNEGOSYO_APP_LINK ||
+      MYNEGOSYO_APP_LINK === "PASTE-YOUR-APP-LINK-HERE"
+    ) {
+      alert("Please add your MyNegosyo app link in the code first.");
+      return;
+    }
+
+    // Directly open/download the app
+    window.location.href = MYNEGOSYO_APP_LINK;
+  });
+</script>
+  </header>
+
+  <main id="home">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span></span> One dashboard. Your whole negosyo.</div>
+          <h1>Run your tindahan <span>without the guesswork.</span></h1>
+          <p>Track inventory, sales, services, utang, GCash, e-load, bills, payroll, and cash — in one simple MyNegosyo dashboard.</p>
+          <div class="hero-actions"><a class="btn btn-soft btn-lg" href="#demo"><i class="fa-regular fa-circle-play"></i> See it in action</a></div>
+          <div class="hero-note"><i class="fa-solid fa-shield-halved"></i> No hardware required · Works on phone, tablet & desktop</div>
+        </div>
+        <div class="hero-visual reveal" id="demo">
+          <div class="browser-card">
+            <div class="browser-bar"><span></span><span></span><span></span><div class="browser-url"><i class="fa-solid fa-lock"></i> app.mynegosyo.local</div></div>
+            <div class="dashboard-preview">
+              <aside class="mini-sidebar"><div class="mini-brand"><span class="brand-logo tiny"><span class="brand-m">M</span><span class="brand-n">N</span></span></div><div class="mini-nav active"><i class="fa-solid fa-grid-2"></i></div><div class="mini-nav"><i class="fa-solid fa-boxes-stacked"></i></div><div class="mini-nav"><i class="fa-solid fa-cart-shopping"></i></div><div class="mini-nav"><i class="fa-solid fa-users"></i></div><div class="mini-nav"><i class="fa-solid fa-chart-line"></i></div><div class="mini-spacer"></div><div class="mini-nav"><i class="fa-solid fa-gear"></i></div></aside>
+              <div class="mini-main"><div class="mini-top"><div><small>Good afternoon</small><strong>MyNegosyo Dashboard</strong></div><div class="mini-actions"><span class="mini-search"><i class="fa-solid fa-magnifying-glass"></i> Search</span><span class="mini-bell"><i class="fa-regular fa-bell"></i><b>3</b></span><span class="mini-avatar">N</span></div></div>
+                <div class="mini-kpis"><div class="kpi"><small>Today’s sales</small><strong id="kpiSales">₱8,420</strong><span class="up"><i class="fa-solid fa-arrow-trend-up"></i> 12.8%</span></div><div class="kpi"><small>Gross profit</small><strong>₱2,145</strong><span class="up">25.5% margin</span></div><div class="kpi"><small>Utang</small><strong>₱4,930</strong><span class="warn">6 customers</span></div><div class="kpi"><small>Low stock</small><strong>7 items</strong><span class="danger">Restock soon</span></div></div>
+                <div class="mini-grid"><div class="mini-panel chart-panel"><div class="panel-head"><strong>Sales overview</strong><span>Last 7 days ▾</span></div><div class="chart"><div class="chart-grid"></div><svg viewBox="0 0 600 190" preserveAspectRatio="none" aria-label="Sales trend"><polyline points="0,140 80,110 160,125 240,80 320,95 400,45 480,70 560,25 600,35" fill="none" stroke="#1769ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div><div class="mini-panel alert-panel"><div class="panel-head"><strong>Needs attention</strong><span class="linklike">View all</span></div><div class="alert-row"><span class="alert-icon yellow"><i class="fa-solid fa-box"></i></span><div><strong>Lucky Me Pancit Canton</strong><small>Only 4 left</small></div><b>Restock</b></div><div class="alert-row"><span class="alert-icon red"><i class="fa-regular fa-calendar-xmark"></i></span><div><strong>Bear Brand 33g</strong><small>Expires in 5 days</small></div><b class="red-text">Check</b></div><div class="alert-row"><span class="alert-icon purple"><i class="fa-solid fa-file-invoice-dollar"></i></span><div><strong>Rina’s balance</strong><small>₱650 overdue</small></div><b class="purple-text">View</b></div></div></div>
+              </div></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-shape shape-one"></div><div class="hero-shape shape-two"></div>
+    </section>
+
+    <section class="trust-strip"><div class="container trust-grid"><div><strong>₱0</strong><span>to get started</span></div><div><strong>1 dashboard</strong><span>for your daily records</span></div><div><strong>100% digital</strong><span>no special hardware</span></div><div><strong>Made for PH</strong><span>sari-sari & small business</span></div></div></section>
+
+    <section class="section section-soft" id="features"><div class="container"><div class="section-heading reveal"><div class="eyebrow"><span></span> Everything in one place</div><h2>The tools your negosyo actually needs.</h2><p>From your first sale of the day to the last stock count at night, MyNegosyo keeps the important numbers together.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card reveal"><div class="feature-icon blue"><i class="fa-solid fa-boxes-stacked"></i></div><div><h3>Inventory</h3><p>Track batches, quantities, costs, low-stock levels, and expiry dates.</p><a href="#demo">Explore inventory <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        <article class="feature-card reveal"><div class="feature-icon red"><i class="fa-solid fa-cart-shopping"></i></div><div><h3>Sales</h3><p>Ring up cash, GCash, or utang sales with an easy checkout cart.</p><a href="#demo">See checkout <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        <article class="feature-card reveal"><div class="feature-icon yellow"><i class="fa-solid fa-scissors"></i></div><div><h3>Services</h3><p>Sell haircuts, repairs, labor, and other services beside products.</p><a href="#demo">Add services <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        <article class="feature-card reveal"><div class="feature-icon purple"><i class="fa-solid fa-hand-holding-dollar"></i></div><div><h3>Utang</h3><p>Keep a running customer balance with charges, payments, and reminders.</p><a href="#demo">Manage utang <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        <article class="feature-card reveal"><div class="feature-icon green"><i class="fa-solid fa-mobile-screen-button"></i></div><div><h3>GCash</h3><p>Log cash-in and cash-out transactions and know your wallet float.</p><a href="#demo">Track GCash <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        <article class="feature-card reveal"><div class="feature-icon orange"><i class="fa-solid fa-signal"></i></div><div><h3>E-load</h3><p>Track prepaid load activity across major Philippine networks.</p><a href="#demo">Track e-load <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        <article class="feature-card reveal"><div class="feature-icon cyan"><i class="fa-solid fa-receipt"></i></div><div><h3>Bills</h3><p>Store due dates and paid status for electricity, rent, internet, and more.</p><a href="#demo">Track bills <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        <article class="feature-card reveal"><div class="feature-icon navy"><i class="fa-solid fa-people-group"></i></div><div><h3>Payroll</h3><p>Record staff, payout periods, rates, and salary history in one place.</p><a href="#demo">Manage payroll <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      </div>
+    </div></section>
+
+    <section class="section"><div class="container benefit-grid"><div class="benefit-copy reveal"><div class="eyebrow"><span></span> Built for real daily work</div><h2>
+  <span class="less-notebook">Less notebook work.</span>
+  <span class="more-control"> More control.</span>
+</h2><p>MyNegosyo is designed around the simple questions every store owner asks: What sold today? What is running low? Who still owes me? Which bills are due?</p><div class="check-list"><div><i class="fa-solid fa-circle-check"></i><span>Low-stock and expiry alerts before problems become surprises.</span></div><div><i class="fa-solid fa-circle-check"></i><span>Daily sales, item-level activity, and simple reports.</span></div><div><i class="fa-solid fa-circle-check"></i><span>Separate views for cash, GCash, utang, and vault balances.</span></div></div><div class="benefit-card reveal"><div class="floating-label top"><i class="fa-solid fa-bell"></i><div><strong>3 alerts</strong><small>Needs your attention</small></div></div><div class="phone-frame"><div class="phone-notch"></div><div class="phone-screen"><div class="phone-top"><span class="phone-logo"><span class="brand-m">M</span><span class="brand-n">N</span></span><div><small>Good morning</small><strong>Store Overview</strong></div><i class="fa-regular fa-bell"></i></div><div class="phone-sales"><small>Today’s sales</small><strong>₱5,860.00</strong><span><i class="fa-solid fa-arrow-trend-up"></i> +18.4%</span></div><div class="phone-actions"><button><i class="fa-solid fa-cart-plus"></i> New sale</button><button><i class="fa-solid fa-box"></i> Add stock</button></div><div class="phone-list"><div><span class="dot blue-dot"></span><strong>Lucky Me</strong><small>4 left</small></div><div><span class="dot red-dot"></span><strong>Rina</strong><small>₱650 due</small></div><div><span class="dot yellow-dot"></span><strong>MERALCO</strong><small>Due Sep 20</small></div></div></div></div><div class="floating-label bottom"><i class="fa-solid fa-shield-heart"></i><div><strong>Simple by design</strong><small>Made for daily use</small></div></div></div></div></section>
+    <section class="section section-soft" id="how"><div class="container"><div class="section-heading reveal"><div class="eyebrow"><span></span> How it works</div><h2>Set up in three easy steps.</h2><p>No POS hardware. No complicated training. Just add what you need and start recording.</p></div><div class="steps-grid"><article class="step-card reveal"><span class="step-number">01</span><div class="step-icon"><i class="fa-solid fa-box-open"></i></div><h3>Add your products</h3><p>List your products, prices, reorder levels, and initial stock.</p></article><article class="step-card reveal"><span class="step-number">02</span><div class="step-icon"><i class="fa-solid fa-cash-register"></i></div><h3>Start selling</h3><p>Ring up sales as cash, GCash, or utang. Stock and balances update.</p></article><article class="step-card reveal"><span class="step-number">03</span><div class="step-icon"><i class="fa-solid fa-chart-column"></i></div><h3>Check your dashboard</h3><p>See daily sales, low stock, expiring items, and outstanding balances.</p></article></div></div></section>
+
+    <section class="section compare-section"><div class="container"><div class="section-heading reveal"><div class="eyebrow"><span></span> Why MyNegosyo</div><h2>More useful than a notebook.</h2><p>Keep the familiar workflow of a small store, but get the visibility of a digital dashboard.</p></div><div class="compare-card reveal"><div class="compare-head"><div>Capability</div><div class="muted">Notebook / Excel</div><div>MyNegosyo</div></div><div class="compare-row"><div>Inventory & low-stock alerts</div><div><i class="fa-solid fa-minus"></i></div><div><i class="fa-solid fa-circle-check"></i></div></div><div class="compare-row"><div>Utang per customer</div><div><i class="fa-solid fa-minus"></i></div><div><i class="fa-solid fa-circle-check"></i></div></div><div class="compare-row"><div>GCash cash-in / cash-out ledger</div><div><i class="fa-solid fa-minus"></i></div><div><i class="fa-solid fa-circle-check"></i></div></div><div class="compare-row"><div>Sales dashboard</div><div><i class="fa-solid fa-minus"></i></div><div><i class="fa-solid fa-circle-check"></i></div></div><div class="compare-row"><div>Services + product checkout</div><div><i class="fa-solid fa-minus"></i></div><div><i class="fa-solid fa-circle-check"></i></div></div></div></div></section>
+
+
+    <section class="section faq-section" id="faq"><div class="container faq-wrap"><div class="section-heading reveal"><div class="eyebrow"><span></span> FAQ</div><h2>
+  <span class="questions">Questions</span>,
+  <span class="answered">answered.</span>
+</h2></div><div class="faq-list reveal"><details open><summary>Is MyNegosyo a BIR-accredited POS?</summary><p>No. This website presents MyNegosyo as a back-office management and digital ledger tool. Businesses remain responsible for applicable registration, invoicing, receipts, and tax compliance.</p></details><details><summary>Can I use it on my phone?</summary><p>Yes. The UI is designed to be responsive for phones, tablets, and desktop browsers.</p></details><details><summary>Can I track both products and services?</summary><p>Yes. MyNegosyo can organize product sales and service entries in the same operational workflow.</p></details><details><summary>Can I customize the app for my business?</summary><p>Yes. The codebase is designed as a web app foundation that can be extended with database, authentication, cloud sync, and custom modules.</p></details></div></div></section>
+
+    <section class="cta-section"><div class="container cta-box reveal"><div><div class="eyebrow"><span></span> Ready when you are</div><h2>Run your negosyo with more confidence.</h2><p>Start with the tools you need today and build from there.</p></div><button class="btn btn-primary btn-lg" id="ctaSignup">Create your free account <i class="fa-solid fa-arrow-right"></i></button></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><a href="#home" class="brand"><span class="brand-logo" aria-hidden="true"><span class="brand-m">M</span><span class="brand-n">N</span><span class="brand-arc"></span></span><span class="brand-copy"><strong><b>My</b><em>Negosyo</em></strong><small>Negosyo manager</small></span></a><p>Simple tools for Filipino sari-sari stores and small businesses.</p></div><div><h4>Product</h4><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#how">How it works</a></div><div><h4>Company</h4><a href="#faq">FAQ</a><a href="mailto:hello@mynegosyo.app">Contact</a><a href="#privacy">Privacy</a></div><div><h4>Get started</h4><button class="footer-link" id="footerLogin">Log in</button><button class="footer-link" id="footerSignup">Create account</button></div></div><div class="container footer-bottom"><span>© 2026 MyNegosyo · Made for Filipino small businesses</span><span><span class="brand-pill blue">BLUE</span><span class="brand-pill red">RED</span><span class="brand-pill yellow">YELLOW</span></span></div></footer>
+
+  <div class="modal-backdrop" id="installBackdrop" hidden>
+    <div class="install-modal" role="dialog" aria-modal="true" aria-labelledby="installTitle">
+      <button class="modal-close" id="installClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="install-modal-icon"><i class="fa-solid fa-download"></i></div>
+      <div class="eyebrow"><span></span> MyNegosyo app</div>
+<h2 id="installTitle">
+  Install <span class="my">My</span><span class="negosyo">Negosyo</span>
+</h2>      <p id="installDescription">Install MyNegosyo on Chrome for quick access like an app.</p>
+<button class="btn btn-primary full install-now" id="installNow">
+  <i class="fa-solid fa-download"></i> Install MyNegosyo
+</button>
+
+<script>
+  const APP_LINK = "https://my-negosyo-7rpohhmbd-nathz.vercel.app/";
+
+  document.getElementById("installNow").addEventListener("click", function () {
+    window.location.href = APP_LINK;
+  });
+</script>      <div class="chrome-instructions" id="chromeInstructions">
+        <h3><i class="fa-brands fa-chrome"></i> Chrome instructions</h3>
+        <ol>
+          <li>Open MyNegosyo using <strong>Google Chrome</strong>.</li>
+          <li>Look for the <strong>Install</strong> icon in the address bar, or open <strong>⋮ → Cast, save, and share → Install page as app</strong>.</li>
+          <li>Select <strong>Install</strong> and confirm.</li>
+          <li>MyNegosyo will appear as an app you can open from your desktop or app launcher.</li>
+        </ol>
+      </div>
+      <p class="install-note" id="installNote"><i class="fa-solid fa-circle-info"></i> The install button appears when Chrome allows the web app install prompt.</p>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden><div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button><div class="auth-side"><span class="brand-logo large" aria-hidden="true"><span class="brand-m">M</span><span class="brand-n">N</span><span class="brand-arc"></span></span><h3 id="sideTitle">Ready to run smarter?</h3><p>Build your digital negosyo dashboard in minutes.</p><div class="auth-points"><span><i class="fa-solid fa-check"></i> Inventory</span><span><i class="fa-solid fa-check"></i> Sales & utang</span><span><i class="fa-solid fa-check"></i> Reports</span></div></div><div class="auth-form"><div class="eyebrow"><span></span> MyNegosyo</div><h2 id="modalTitle">Create your account</h2><p id="modalDescription">Use a local demo account to explore this website.</p><form id="authForm"><label>Full name<input name="name" id="authName" placeholder="Juan Dela Cruz" required></label><label>Email<input name="email" type="email" id="authEmail" placeholder="you@example.com" required></label><label>Password<input name="password" type="password" id="authPassword" placeholder="At least 6 characters" minlength="6" required></label><label id="storeField">Store name<input name="store" id="authStore" placeholder="Juan's Sari-Sari Store"></label><button class="btn btn-primary full" type="submit" id="authSubmit">Create free account</button></form><div class="auth-switch"><span id="switchPrompt">Already have an account?</span><button class="link-btn" id="switchMode">Log in</button></div><div class="form-status" id="formStatus" role="status" aria-live="polite"></div></div></div></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "MyNegosyo",
+  "short_name": "MyNegosyo",
+  "description": "A simple digital manager for Filipino sari-sari stores and small businesses.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1769ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='40' fill='%231769ff'/%3E%3Cpath d='M36 60h120v72H36z' fill='%23fff' opacity='.96'/%3E%3Cpath d='M48 52h96l12 24H36z' fill='%23ffd43b'/%3E%3Cpath d='M52 82l22 22 22-22 22 22 22-22v56H52z' fill='%23ff334d'/%3E%3Cpath d='M72 82v56h48V82l-24 22z' fill='%231769ff'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='108' fill='%231769ff'/%3E%3Cpath d='M96 160h320v192H96z' fill='%23fff' opacity='.96'/%3E%3Cpath d='M128 140h256l32 64H96z' fill='%23ffd43b'/%3E%3Cpath d='M138 220l58 56 58-56 58 56 58-56v144H138z' fill='%23ff334d'/%3E%3Cpath d='M190 220v144h132V220l-66 56z' fill='%231769ff'/%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
