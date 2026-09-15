@@ -103,3 +103,1484 @@
 #installTitle .negosyo {
   color: #FF2020; /* Negosyo */
 }
+
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================================
+   HOW MYNEGOSYO WORKS
+========================================= */
+
+.how-it-works-flow {
+  margin-top: 55px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+}
+
+.flow-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 150px;
+}
+
+.flow-icon {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  color: #111827;
+  font-size: 17px;
+}
+
+.flow-item strong {
+  display: block;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.flow-item span {
+  display: block;
+  margin-top: 3px;
+  color: #7b8494;
+  font-size: 11px;
+}
+
+.flow-arrow {
+  color: #a0a7b2;
+  font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .how-it-works-flow {
+    flex-wrap: wrap;
+  }
+
+  .flow-arrow {
+    display: none;
+  }
+
+  .flow-item {
+    flex: 1 1 200px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .how-it-works-flow {
+    margin-top: 35px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .flow-item {
+    min-width: 0;
+  }
+
+  .flow-icon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .flow-item strong {
+    font-size: 13px;
+  }
+
+  .flow-item span {
+    font-size: 10px;
+  }
+
+}
+
+.phone-logo {
+  width: 35px;
+  height: 35px;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand-logo.tiny {
+  width: 32px;
+  height: 32px;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================================================
+   MYNEGOSYO — UNIVERSAL RESPONSIVE SYSTEM
+   Fits phones, tablets, laptops, desktops and ultrawide screens
+   ========================================================= */
+
+/* ---------- GLOBAL RESPONSIVE FOUNDATION ---------- */
+
+html {
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  max-width: 100%;
+}
+
+button {
+  white-space: normal;
+}
+
+a {
+  overflow-wrap: anywhere;
+}
+
+
+/* ---------- UNIVERSAL CONTAINER ---------- */
+
+.container {
+  width: min(1180px, calc(100% - 32px));
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+  width: 100%;
+  max-width: 100%;
+}
+
+.nav-wrap {
+  width: 100%;
+  min-width: 0;
+  height: clamp(64px, 6vw, 76px);
+}
+
+.brand {
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.brand-copy {
+  min-width: 0;
+}
+
+.brand-copy strong {
+  white-space: nowrap;
+}
+
+.brand-copy small {
+  white-space: nowrap;
+}
+
+.desktop-nav {
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.nav-actions {
+  flex-shrink: 0;
+}
+
+
+/* ---------- LOGO ---------- */
+
+.brand-logo {
+  width: clamp(34px, 4vw, 42px);
+  height: clamp(34px, 4vw, 42px);
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo-img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-logo.tiny {
+  width: 32px;
+  height: 32px;
+}
+
+.brand-logo.large {
+  width: 42px;
+  height: 42px;
+}
+
+
+/* ---------- ANNOUNCEMENT BAR ---------- */
+
+.announcement {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.announcement-inner {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+
+/* ---------- SECTIONS ---------- */
+
+.section {
+  width: 100%;
+  min-width: 0;
+  padding: clamp(65px, 9vw, 110px) 0;
+}
+
+.section-heading {
+  width: 100%;
+  max-width: 740px;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  padding: clamp(55px, 8vw, 90px) 0;
+}
+
+.hero-grid {
+  width: 100%;
+  min-width: 0;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1.18fr);
+}
+
+.hero-copy,
+.hero-visual {
+  min-width: 0;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5.5vw, 70px);
+  overflow-wrap: break-word;
+}
+
+.hero p {
+  width: 100%;
+  max-width: 610px;
+}
+
+.hero-actions {
+  max-width: 100%;
+}
+
+
+/* ---------- BROWSER PREVIEW ---------- */
+
+.browser-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.browser-bar {
+  min-width: 0;
+}
+
+.browser-url {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-preview {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.mini-sidebar {
+  flex: 0 0 58px;
+}
+
+.mini-main {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.mini-kpis,
+.mini-grid {
+  width: 100%;
+  min-width: 0;
+}
+
+.kpi {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.kpi strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chart {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* ---------- TRUST STRIP ---------- */
+
+.trust-strip {
+  width: 100%;
+  overflow: hidden;
+}
+
+.trust-grid {
+  width: 100%;
+  min-width: 0;
+}
+
+.trust-grid > div {
+  min-width: 0;
+}
+
+
+/* ---------- FEATURES ---------- */
+
+.feature-grid {
+  width: 100%;
+  min-width: 0;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+}
+
+.feature-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.feature-card > div:last-child {
+  min-width: 0;
+}
+
+
+/* ---------- BENEFITS ---------- */
+
+.benefit-grid {
+  width: 100%;
+  min-width: 0;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+}
+
+.benefit-copy {
+  min-width: 0;
+}
+
+.benefit-card {
+  width: 100%;
+  min-width: 0;
+}
+
+.phone-frame {
+  width: min(285px, 82vw);
+  max-width: 100%;
+}
+
+.phone-screen {
+  width: 100%;
+  min-width: 0;
+}
+
+.phone-top,
+.phone-actions,
+.phone-list {
+  min-width: 0;
+}
+
+.phone-top div {
+  min-width: 0;
+}
+
+.phone-top strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.phone-sales {
+  min-width: 0;
+}
+
+.phone-list {
+  overflow: hidden;
+}
+
+
+/* ---------- FLOATING LABELS ---------- */
+
+.floating-label {
+  max-width: min(220px, 42%);
+}
+
+.floating-label.top {
+  right: 0;
+}
+
+.floating-label.bottom {
+  left: 0;
+}
+
+
+/* ---------- HOW IT WORKS ---------- */
+
+.how-it-works-flow {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.flow-item {
+  min-width: 0;
+}
+
+.flow-item > div:last-child {
+  min-width: 0;
+}
+
+.flow-item strong,
+.flow-item span {
+  overflow-wrap: anywhere;
+}
+
+
+/* ---------- STEPS ---------- */
+
+.steps-grid {
+  width: 100%;
+  min-width: 0;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+}
+
+.step-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+
+/* ---------- COMPARISON ---------- */
+
+.compare-card {
+  width: 100%;
+  max-width: 890px;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.compare-head,
+.compare-row {
+  min-width: 500px;
+}
+
+
+/* ---------- PRICING ---------- */
+
+.pricing-grid {
+  width: 100%;
+  max-width: 1000px;
+  min-width: 0;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+}
+
+.price-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.price-card h3 {
+  font-size: clamp(29px, 4vw, 35px);
+}
+
+
+/* ---------- FAQ ---------- */
+
+.faq-wrap {
+  width: 100%;
+  min-width: 0;
+  grid-template-columns:
+    minmax(0, .85fr)
+    minmax(0, 1.15fr);
+}
+
+.faq-wrap > * {
+  min-width: 0;
+}
+
+.faq-list {
+  min-width: 0;
+}
+
+.faq-list summary {
+  overflow-wrap: anywhere;
+}
+
+
+/* ---------- CTA ---------- */
+
+.cta-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.cta-box {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.cta-box > * {
+  min-width: 0;
+}
+
+.cta-box h2 {
+  font-size: clamp(28px, 4vw, 37px);
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-grid {
+  width: 100%;
+  min-width: 0;
+  grid-template-columns:
+    minmax(0, 1.6fr)
+    minmax(0, .8fr)
+    minmax(0, .8fr)
+    minmax(0, .8fr);
+}
+
+.footer-grid > div {
+  min-width: 0;
+}
+
+.footer-grid p {
+  overflow-wrap: anywhere;
+}
+
+.footer-bottom {
+  width: 100%;
+  min-width: 0;
+}
+
+.footer-bottom > * {
+  min-width: 0;
+}
+
+
+/* ---------- AUTH MODAL ---------- */
+
+.modal-backdrop {
+  width: 100%;
+  max-width: 100%;
+  overflow-y: auto;
+}
+
+.auth-modal {
+  width: min(760px, 100%);
+  max-width: 100%;
+  min-width: 0;
+}
+
+.auth-side,
+.auth-form {
+  min-width: 0;
+}
+
+.auth-form input {
+  min-width: 0;
+}
+
+
+/* ---------- INSTALL MODAL ---------- */
+
+.install-modal {
+  width: min(560px, calc(100vw - 28px));
+  max-width: 100%;
+  min-width: 0;
+}
+
+.install-modal > * {
+  max-width: 100%;
+}
+
+.chrome-instructions {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .container {
+    width: min(100% - 32px, 1100px);
+  }
+
+  .desktop-nav {
+    gap: 18px;
+  }
+
+  .hero-grid {
+    gap: 35px;
+  }
+
+  .benefit-grid {
+    gap: 45px;
+  }
+
+  .footer-grid {
+    gap: 25px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .container {
+    width: min(100% - 28px, 850px);
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-grid,
+  .benefit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .hero-copy .eyebrow {
+    justify-content: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-note {
+    justify-content: center;
+  }
+
+  .hero p {
+    margin-inline: auto;
+  }
+
+  .benefit-copy {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
+  .benefit-card {
+    min-height: 520px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-wrap {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .price-card.featured {
+    order: -1;
+  }
+
+  .steps-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns:
+      minmax(0, 1.4fr)
+      minmax(0, .8fr)
+      minmax(0, .8fr);
+  }
+
+  .footer-grid > div:last-child {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   LARGE PHONE / SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .container {
+    width: calc(100% - 24px);
+    max-width: none;
+  }
+
+  .announcement-inner {
+    padding: 7px 0;
+  }
+
+  .nav-wrap {
+    height: 64px;
+    gap: 10px;
+  }
+
+  .brand {
+    gap: 7px;
+  }
+
+  .brand-copy strong {
+    font-size: 16px;
+  }
+
+  .brand-copy small {
+    font-size: 8px;
+  }
+
+  .nav-actions {
+    gap: 4px;
+  }
+
+  .nav-actions .btn-ghost {
+    display: none;
+  }
+
+  .hero {
+    padding: 50px 0 60px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 11vw, 48px);
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .browser-card {
+    transform: none;
+  }
+
+  .browser-card:hover {
+    transform: none;
+  }
+
+  .dashboard-preview {
+    height: auto;
+    min-height: 355px;
+  }
+
+  .mini-sidebar {
+    width: 45px;
+    flex-basis: 45px;
+  }
+
+  .mini-main {
+    padding: 11px;
+  }
+
+  .mini-top strong {
+    font-size: 11px;
+  }
+
+  .mini-search {
+    display: none;
+  }
+
+  .mini-kpis {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .mini-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .alert-panel {
+    display: none;
+  }
+
+  .chart {
+    height: 120px;
+  }
+
+  .trust-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .trust-grid > div {
+    justify-content: flex-start;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(30px, 9vw, 38px);
+  }
+
+  .benefit-copy h2 {
+    font-size: clamp(32px, 9vw, 40px);
+  }
+
+  .phone-frame {
+    width: min(285px, 78vw);
+  }
+
+  .floating-label {
+    transform: scale(.88);
+    max-width: 43%;
+  }
+
+  .floating-label.top {
+    right: -3px;
+  }
+
+  .floating-label.bottom {
+    left: -3px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how-it-works-flow {
+    display: grid;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .flow-arrow {
+    display: none;
+  }
+
+  .flow-item {
+    min-width: 0;
+  }
+
+  .compare-card {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .compare-head,
+  .compare-row {
+    min-width: 500px;
+  }
+
+  .cta-box {
+    padding: 30px 22px;
+    display: grid;
+  }
+
+  .footer-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    display: grid;
+  }
+
+  .auth-modal {
+    width: 100%;
+  }
+
+  .auth-side {
+    display: none;
+  }
+
+  .auth-form {
+    padding: 28px 20px;
+  }
+
+  .install-modal {
+    width: calc(100vw - 24px);
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .install-modal h2 {
+    font-size: clamp(25px, 8vw, 30px);
+  }
+}
+
+
+/* =========================================================
+   NORMAL PHONE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .container {
+    width: calc(100% - 20px);
+  }
+
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-copy strong {
+    font-size: 15px;
+  }
+
+  .brand-copy small {
+    font-size: 7px;
+  }
+
+  .menu-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hero {
+    padding-top: 42px;
+  }
+
+  .hero h1 {
+    font-size: clamp(33px, 11vw, 43px);
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .browser-bar {
+    padding: 0 9px;
+  }
+
+  .browser-url {
+    margin-left: 5px;
+    font-size: 7px;
+  }
+
+  .dashboard-preview {
+    min-height: 320px;
+  }
+
+  .mini-sidebar {
+    width: 39px;
+    flex-basis: 39px;
+  }
+
+  .mini-nav {
+    width: 30px;
+    height: 30px;
+  }
+
+  .mini-main {
+    padding: 8px;
+  }
+
+  .mini-kpis {
+    gap: 4px;
+  }
+
+  .kpi {
+    padding: 7px;
+  }
+
+  .kpi strong {
+    font-size: 10px;
+  }
+
+  .trust-grid {
+    gap: 10px;
+  }
+
+  .trust-grid strong {
+    font-size: 14px;
+  }
+
+  .feature-card {
+    padding: 17px;
+    gap: 12px;
+  }
+
+  .feature-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .feature-card h3 {
+    font-size: 16px;
+  }
+
+  .feature-card p {
+    font-size: 11px;
+  }
+
+  .how-it-works-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-frame {
+    width: min(275px, 82vw);
+  }
+
+  .floating-label {
+    transform: scale(.78);
+    transform-origin: center;
+  }
+
+  .floating-label.top {
+    right: -12px;
+  }
+
+  .floating-label.bottom {
+    left: -12px;
+  }
+
+  .compare-head,
+  .compare-row {
+    min-width: 460px;
+  }
+
+  .compare-head > div,
+  .compare-row > div {
+    padding: 11px 9px;
+    font-size: 9px;
+  }
+
+  .price-card {
+    padding: 22px;
+  }
+
+  .cta-box h2 {
+    font-size: 27px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: auto;
+  }
+
+  .footer-grid h4 {
+    margin-top: 18px;
+  }
+
+  .footer-bottom {
+    gap: 12px;
+  }
+
+  .install-modal {
+    width: calc(100vw - 16px);
+    padding: 20px;
+  }
+
+  .install-modal-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .chrome-instructions {
+    padding: 14px;
+  }
+
+  .chrome-instructions li {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .container {
+    width: calc(100% - 16px);
+  }
+
+  .brand {
+    gap: 5px;
+  }
+
+  .brand-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-copy strong {
+    font-size: 14px;
+  }
+
+  .brand-copy small {
+    display: none;
+  }
+
+  .nav-wrap {
+    height: 60px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .mini-sidebar {
+    width: 35px;
+    flex-basis: 35px;
+  }
+
+  .mini-nav {
+    width: 27px;
+    height: 27px;
+    font-size: 10px;
+  }
+
+  .mini-kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    display: block;
+  }
+
+  .feature-icon {
+    margin-bottom: 10px;
+  }
+
+  .phone-frame {
+    width: 86vw;
+  }
+
+  .floating-label {
+    display: none;
+  }
+
+  .compare-head,
+  .compare-row {
+    min-width: 420px;
+  }
+
+  .cta-box {
+    padding: 24px 18px;
+  }
+
+  .install-modal {
+    width: calc(100vw - 10px);
+    padding: 17px;
+    border-radius: 17px;
+  }
+}
+
+
+/* =========================================================
+   LANDSCAPE PHONES
+   ========================================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+  .nav-wrap {
+    height: 58px;
+  }
+
+  .hero {
+    padding: 35px 0 45px;
+  }
+
+  .section {
+    padding: 55px 0;
+  }
+
+  .modal-backdrop {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .install-modal,
+  .auth-modal {
+    max-height: 95vh;
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP / ULTRAWIDE
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+  .container {
+    width: min(1280px, calc(100% - 64px));
+    max-width: 1280px;
+  }
+
+  .hero-grid {
+    gap: 70px;
+  }
+
+  .section {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .browser-card:hover,
+  .feature-card:hover,
+  .btn-primary:hover {
+    transform: none;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .btn,
+  .menu-toggle,
+  .footer-link {
+    touch-action: manipulation;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY / TEXT SCALING
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+
+/* =========================================================
+   SAFE AREA — iPHONE / iPAD
+   ========================================================= */
+
+@supports (padding: env(safe-area-inset-top)) {
+
+  .site-header {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .site-footer {
+    padding-bottom: calc(
+      20px + env(safe-area-inset-bottom)
+    );
+  }
+
+}
+
+
+/* =========================================================
+   PREVENT HORIZONTAL OVERFLOW FROM LONG CONTENT
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+strong,
+small,
+label {
+  overflow-wrap: break-word;
+}
+
+pre,
+code {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  max-width: 100%;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   UNIVERSAL GRID SAFETY
+   ========================================================= */
+
+.grid,
+[class*="grid"] {
+  min-width: 0;
+}
+
+[class*="grid"] > * {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   UNIVERSAL FLEX SAFETY
+   ========================================================= */
+
+.flex,
+[class*="flex"] {
+  min-width: 0;
+}
+
+[class*="flex"] > * {
+  min-width: 0;
+}
