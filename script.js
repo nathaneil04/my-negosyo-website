@@ -35,13 +35,13 @@
       $('#installNote').innerHTML='<i class="fa-solid fa-circle-check"></i> You are using MyNegosyo as an installed app.';
       $('#chromeInstructions').style.display='none';
     } else if(deferredInstallPrompt){
-      $('#installDescription').textContent='Install MyNegosyo directly from Chrome.';
+      $('#installDescription').textContent='Install MyNegosyo app now.';
       $('#chromeInstructions').style.display='none';
-      $('#installNote').innerHTML='<i class="fa-solid fa-bolt"></i> Chrome is ready to show the install prompt.';
+      $('#installNote').innerHTML='<i class="fa-solid fa-bolt"></i> MyNegosyo app is ready to show the install icon.';
     } else {
-      $('#installDescription').textContent='Install MyNegosyo on Chrome for quick access like an app.';
+      $('#installDescription').textContent='Install MyNegosyo app on your device for quick access.';
       $('#chromeInstructions').style.display='block';
-      $('#installNote').innerHTML='<i class="fa-solid fa-circle-info"></i> If Chrome does not show the install prompt, use the instructions below.';
+      $('#installNote').innerHTML='<i class="fa-solid fa-circle-info"></i> If the app still doesn’t download, simply follow the instructions for your device.';
     }
   }
   function closeInstallModal(){ if(installBackdrop){ installBackdrop.hidden=true; document.body.style.overflow=''; } }
