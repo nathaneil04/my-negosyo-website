@@ -1584,3 +1584,174 @@ iframe {
 [class*="flex"] > * {
   min-width: 0;
 }
+
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.88) 48%,
+      rgba(255, 255, 255, 0.55) 75%,
+      rgba(255, 255, 255, 0.25) 100%
+    ),
+    url("dogbg.png");
+
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+
+    background-image:
+      linear-gradient(
+        rgba(255, 255, 255, 0.92),
+        rgba(255, 255, 255, 0.92)
+      ),
+      url("dogbg.png");
+
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.benefit-section {
+  position: relative;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.92) 40%,
+      rgba(255, 255, 255, 0.72) 65%,
+      rgba(255, 255, 255, 0.30) 100%
+    ),
+    url("dogbg2.png");
+
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.benefit-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.benefit-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(23, 105, 255, 0.10),
+      transparent 35%
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .benefit-section {
+    background-image:
+      linear-gradient(
+        rgba(255, 255, 255, 0.90),
+        rgba(255, 255, 255, 0.90)
+      ),
+      url("dogbg2.png");
+
+    background-size: cover;
+    background-position: 70% center;
+  }
+}
+
+.faq-dog-bg {
+  position: relative;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.88) 0%,
+      rgba(255, 255, 255, 0.62) 35%,
+      rgba(255, 255, 255, 0.20) 65%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    url("dogbg3.png");
+
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.faq-dog-bg .container {
+  position: relative;
+  z-index: 2;
+}
+
+.faq-dog-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 82% 50%,
+    rgba(23, 105, 255, 0.04),
+    transparent 30%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .faq-dog-bg {
+    background-image:
+      linear-gradient(
+        rgba(255, 255, 255, 0.91),
+        rgba(255, 255, 255, 0.91)
+      ),
+      url("dogbg3.png");
+
+    background-size: cover;
+    background-position: 35% center;
+  }
+}
+
+.faq-dog-bg {
+  position: relative;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.82) 0%,
+      rgba(255, 255, 255, 0.45) 40%,
+      rgba(255, 255, 255, 0.08) 70%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("dogbg3.png");
+
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
